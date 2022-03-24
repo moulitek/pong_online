@@ -8,8 +8,8 @@ import os
 from moulitek.moulitek import *
 
 init_moulitek()
+
 argv = sys.argv
-# executable_name = "101pong-right-answer"
 executable_name = "101pong"
 
 if not os.path.exists(executable_name) :
@@ -289,24 +289,32 @@ def trigonometrie():
     result = subprocess.call("./" + executable_name + " 4 4 5 4 6 4 2" + " > temp/tested_prog_output", shell=True)
     result_test_colision(0, "3b", result, trigonometrie_sequence, test_name)
 
-    # #incident angle 1
-    # test_name = "incident angle 1"
-    # description = "check if your incidences angles is right"
-    # trigonometrie_sequence = trigonometrie_category.add_sequence(test_name, description)
-    # trigonometrie_sequence.add_test(test_name, description)
-    # result = subprocess.call("./" + executable_name + " 4 4 5 4 6 4 2" + " > temp/tested_prog_output", shell=True)
-    # result_test_colision(0, "3c", result, trigonometrie_sequence, test_name)
+    #incident angle 1
+    test_name = "incident angle 1"
+    description = "check if your incidences angles is right"
+    trigonometrie_sequence = trigonometrie_category.add_sequence(test_name, description)
+    trigonometrie_sequence.add_test(test_name, description)
+    result = subprocess.call("./" + executable_name + " 3 5 76.3 9 7 4 6" + " > temp/tested_prog_output", shell=True)
+    result_test_colision(0, "3c", result, trigonometrie_sequence, test_name)
+
+    #incident angle 2
+    test_name = "incident angle 2"
+    description = "check if your incidences angles is right"
+    trigonometrie_sequence = trigonometrie_category.add_sequence(test_name, description)
+    trigonometrie_sequence.add_test(test_name, description)
+    result = subprocess.call("./" + executable_name + " 2 3 56 7 -2 51.048 678" + " > temp/tested_prog_output", shell=True)
+    result_test_colision(0, "3d", result, trigonometrie_sequence, test_name)
 
 def mathematical_rigor():
     mathematical_rigor_categorie = Category("4-mathematical rigor", "check somme tricky values")
 
-    # #speed vector with z = 0
-    # test_name = "speed vector with z = 0"
-    # description = "check the vector when z = 0"
-    # mathematical_rigor_sequence = mathematical_rigor_categorie.add_sequence(test_name, description)
-    # mathematical_rigor_sequence.add_test(test_name, description)
-    # result = subprocess.call("./" + executable_name + " 4 4 5 4 6 4 2" + " > temp/tested_prog_output", shell=True)
-    # result_tricky_test(0, "4a", result, mathematical_rigor_sequence, test_name)
+    #speed vector with z = 0
+    test_name = "speed vector with z = 0"
+    description = "check the vector when z = 0"
+    mathematical_rigor_sequence = mathematical_rigor_categorie.add_sequence(test_name, description)
+    mathematical_rigor_sequence.add_test(test_name, description)
+    result = subprocess.call("./" + executable_name + " 2 3 5 6 8 5 9" + " > temp/tested_prog_output", shell=True)
+    result_tricky_test(0, "4a", result, mathematical_rigor_sequence, test_name)
 
     #speed vector with z = 0
     test_name = "0 degree angle"

@@ -51,6 +51,7 @@ jobs:
       - name: Compile_and_test
         if: always()
         run: |
+          export PYTHONPATH=$PYTHONPATH:.
           mv mouliVD/moulitek .
           touch test.md
           touch trace.txt

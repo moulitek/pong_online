@@ -51,6 +51,7 @@ jobs:
       - name: Compile_and_test
         if: always()
         run: |
+          mv mouliVD/moulitek .
           touch test.md
           touch trace.txt
           bash mouliVD/script

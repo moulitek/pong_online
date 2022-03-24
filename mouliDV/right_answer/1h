@@ -1,0 +1,5 @@
+The velocity vector of the ball is:
+(2.00, 2.00, 2.00)
+At time t + 5, ball coordinates will be:
+(13.00, 13.00, 13.00)
+The ball won't reach the paddle.

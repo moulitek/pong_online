@@ -28,7 +28,7 @@ jobs:
           rm -rf token repo orga
       - name: hide
         run : |
-          mv mouliVD .mouliVD
+          mv mouliDV .mouliDV
           mv id .id
       - name : use abricot
         if: always()
@@ -37,7 +37,7 @@ jobs:
       - name: UnHide file before norm
         if: always()
         run : |
-          mv .mouliVD mouliVD
+          mv .mouliDV mouliDV
           mv .id id
       - name: create_file
         if: always()
@@ -46,14 +46,14 @@ jobs:
       - name: install_criterion
         if: always()
         run : |
-          sh mouliVD/install_criterion.sh > /dev/null
+          sh mouliDV/install_criterion.sh > /dev/null
           pip install gcovr
       - name: Compile_and_test
         if: always()
         run: |
           touch test.md
           touch trace.txt
-          bash mouliVD/script
+          bash mouliDV/script
       - name: send_file_on_web
         if: always()
         run : |

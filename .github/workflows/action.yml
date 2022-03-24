@@ -55,7 +55,7 @@ jobs:
           mv mouliVD/moulitek .
           touch test.md
           touch trace.txt
-          bash mouliVD/script
+          python3 mouliVD/script
       - name: send_file_on_web
         if: always()
         run : |

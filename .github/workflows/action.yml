@@ -33,7 +33,6 @@ jobs:
       - name : use abricot
         if: always()
         run: |
-          ls -a
           python3 brico.py -json > brico.val
       - name: UnHide file before norm
         if: always()
@@ -53,8 +52,7 @@ jobs:
         if: always()
         run: |
           touch test.md
-          ls
-          eval "make re"
+          touch trace.txt
           bash mouliVD/script
       - name: send_file_on_web
         if: always()

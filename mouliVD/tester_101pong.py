@@ -66,7 +66,7 @@ def result_test(tested_value, name_id, result, sequence, test_name):
     user_answer = "".join(user_answer.split(")")[:-1])
     user_answer = user_answer + ")"
 
-    right_answer = open("mouliDV/right_answer/" + name_id, "r")
+    right_answer = open("mouliVD/right_answer/" + name_id, "r")
     right_answer = right_answer.read()
     right_answer = "".join(right_answer.split(")")[:-1])
     right_answer = right_answer + ")"
@@ -88,7 +88,7 @@ def result_test_colision(tested_value, name_id, result, sequence, test_name):
     user_answer = open("temp/tested_prog_output", "r")
     user_answer = user_answer.read()
 
-    right_answer = open("mouliDV/right_answer/" + name_id, "r")
+    right_answer = open("mouliVD/right_answer/" + name_id, "r")
     right_answer = right_answer.read()
 
     if result != tested_value:
@@ -108,7 +108,7 @@ def result_tricky_test(tested_value, name_id, result, sequence, test_name):
     user_answer = open("temp/tested_prog_output", "r")
     user_answer = user_answer.read()
 
-    right_answer = open("mouliDV/right_answer/" + name_id, "r")
+    right_answer = open("mouliVD/right_answer/" + name_id, "r")
     right_answer = right_answer.read()
 
     if result != tested_value:
@@ -133,7 +133,7 @@ def test_help():
     temp_answer = "".join(temp_answer.split(")")[:-1])
     temp_answer =temp_answer + ")"
 
-    right_answer = open("mouliDV/right_answer/help", "r")
+    right_answer = open("mouliVD/right_answer/help", "r")
     right_answer = right_answer.read()
     right_answer = "".join(right_answer.split(")")[:-1])
     right_answer = right_answer + ")"

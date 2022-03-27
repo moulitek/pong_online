@@ -1,4 +1,4 @@
-name: CI_dante
+name: CI_pong
 
 on: push
 
@@ -52,7 +52,6 @@ jobs:
         if: always()
         run: |
           export PYTHONPATH=$PYTHONPATH:.
-          mv mouliVD/moulitek .
           touch test.md
           touch trace.txt
           python3 mouliVD/script
